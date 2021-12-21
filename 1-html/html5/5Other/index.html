@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Other</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script>
+            document.createElement("container");
+        </script>
+        <style>
+            body{
+                /*background-color: #EFEFEF;*/
+                background-color: black;
+            }
+            article,header,footer,nav,section,menu,container,figure{
+                margin-top: 5%;
+                display:block;
+                text-align: center;
+                font: bold;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 300%;
+                color:cornflowerblue;
+            }
+        </style>
+    </head>
+<body>
+    <article>
+        Example
+    </article>
+    <container>
+        I am a container
+    </container>
+    <figure>
+        <img data-description="Rick and Morty" id="comedy" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Rick_Sanchez.png/160px-Rick_Sanchez.png" alt="Rick Sanchez">
+        <figcaption>
+            <p>Rick Sanchez <small>(Wikipedia)</small> </p>
+        </figcaption>
+        <input type="range" min="10" max="100" step="5">
+        <ul contenteditable="true">
+            <li>You can edit this if you want</li>
+        </ul>
+        <script>
+            var data=document.getElementById("comedy").getAttribute("data-description");
+            alert(data);
+        </script>
+    </figure>
+</body>
+</html>

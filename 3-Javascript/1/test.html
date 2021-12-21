@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+	</head>
+	<body>
+		<button id="change" onclick="Popup_message()">Click to chane to Macedonian</button>
+		<button onclick="Acces_the_upper_buton()">Acces the upper buton</button>
+		<button id="dodadi_tekst">Dodadi text.</button>
+		<button id="apear">Apear content</button>
+		<button id="stil">Smeni stil</button>
+		<script type="text/javascript">
+			function Acces_the_upper_buton(){
+				//Go pristapuva gornoto kopce
+				document.getElementById("change").innerHTML="Klikni za da smenis na makedonski";
+			}
+			function Popup_message(){
+				/*Go pristapuva paragrafot so id 1 i ja menuva negovata sodrzina*/
+				document.getElementById("1").innerHTML="Zdravo";
+			}
+			document.getElementById("dodadi_tekst").onclick=function(){
+				document.getElementById("1").innerHTML+=" Slavko";
+			}
+			document.getElementById("apear").onclick=
+			function(){
+				document.getElementById("2").innerHTML=
+				"Se javi tekst.";}
+			document.getElementById("stil").onclick=function(){
+				document.getElementById("change").style.fontSize="200%";
+			}
+		</script>
+		<p id="1">Hello</p>
+		<p id="2"></p>
+	</body>
+</html>

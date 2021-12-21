@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+	</head>
+	<body>
+		<form>
+			<input id="text" type="text" name="">
+		</form>
+		<button id="change_text">Change the text</button>
+		<p id="random">Random text</p>
+		<script type="text/javascript">
+			document.getElementById("change_text").onclick=function(){
+				var vnesen_text="";
+				vnesen_text=document.getElementById("text").value;
+				document.getElementById("random").innerHTML=vnesen_text;
+			}
+		</script>
+	</body>
+</html>

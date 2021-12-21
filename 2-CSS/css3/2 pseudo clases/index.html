@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Pseudo clases</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <style>
+            div{
+                color: white;
+            }
+            body{
+                background-color: black;
+            }
+            a{
+                color: aliceblue;
+                opacity: 50%;
+            }
+            a:hover{
+                opacity: 100%;
+            }
+            input{
+                margin-left: 50%;
+                margin-top: 50%;
+            }
+            input:focus{
+                background-color: aqua;
+            }
+            /*input:enabled{}
+            input:disabled{}
+            input:checked{}*/
+            p:first-child{
+                color: yellowgreen;
+            }
+            p:last-child{
+                color: cornflowerblue;
+            }
+            p:only-child{
+                color:seagreen;
+            }
+            p:first-of-type{
+                font-weight: bold;
+            }
+            /*last of type, only of type*/
+            tr:nth-child(2n-1){
+                background-color: green;
+            }
+            /*nth-last child, nth-of type*/
+            div:empty{
+                display: none;
+            }
+            tr:not(.green){
+                color: cadetblue;
+            }
+            :not(div){
+                font-style: italic;
+            }
+            p::first-letter{
+                font-size: 150%;
+            }
+            /*first-line*/
+            a::after{
+                content: " ("attr(href)")";
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>First element paragraph.</p>
+            <p>Second element paragraph.</p>
+        </div>
+        <div>
+            <h1>Examle.</h1>
+            <p>Second element paragraph.</p>
+        </div>
+        <div>
+            <p>Only element paragraph.</p>
+        </div>
+        <div>
+            <table>
+                <tr><td>Joystick</td></tr>
+                <tr><td>Mouse</td></tr>
+                <tr><td>Table</td></tr>
+                <tr><td>Monitor</td></tr>
+                <tr><td>House</td></tr>
+            </table>
+        </div>
+        <a href="index.html">refresh link</a>
+        <input type="text">
+    </body>
+</html>

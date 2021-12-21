@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Gradients and Shadows</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <style>
+            .element{
+                color: white;
+                margin-left: 10%;
+                padding-left: 10%;
+                width: 700px;
+                height: 200px;
+                background-color: cadetblue;
+            }
+            .gradient{
+                background: linear-gradient(to bottom right,white,cadetblue,silver);
+            }
+            #radialgradient{
+                background: radial-gradient(cadetblue,silver);
+            }
+            #diagonalgradient{
+                background: linear-gradient(to bottom left,green,yellow);
+            }
+            h2{
+                text-shadow: 2px 2px 4px green, -5px -5px 4px yellow;
+                color: white;
+            }
+            h3{
+                text-shadow: 0 0 5px red;
+            }
+            #shadow{
+                width: 200px;
+                height: 200px;
+                box-shadow: 12px 12px 6px grey;
+                background-color: antiquewhite;
+            }
+        </style>
+    </head>
+    <body>
+        <br><div class="element gradient"><br><h1>Gradient</h1></div><br>
+        <div class=element id="radialgradient"><br><h1>Radial Gradient</h1></div><br>
+        <div class=element id="diagonalgradient"><br><h1>Diagonal Gradient</h1></div>
+        <h2>Transparent</h2>
+        <h3>Glow</h3>
+        <div id="shadow"></div>
+    </body>
+</html>

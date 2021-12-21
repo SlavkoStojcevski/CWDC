@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+		<style type="text/css">
+
+			.krug{
+				padding-top: 10px;
+				text-align: center;
+				width: 130px;
+				float: left;
+				border-radius: 50%;
+				margin-right: 50px;
+			}
+			#crveno{
+				background-color: red;
+				height: 130px;
+			}
+			#zolto{
+				background-color: yellow;
+				height: 130px;
+			}
+			#zeleno{
+				background-color: green;
+				height: 130px;
+			}
+		</style>
+	</head>
+	<body>
+		<button></button>
+		<div class="krug" id="crveno">Crveno</div>
+		<div class="krug" id="zolto">Zolto</div>
+		<div class="krug" id="zeleno">Zeleno</div>
+		<script type="text/javascript">
+			document.getElementById("crveno").onclick=function(){
+				document.getElementById("crveno").style.display="none";
+			}
+			document.getElementById("zolto").onclick=function(){
+				document.getElementById("zolto").style.display="none";
+			}
+			document.getElementById("zeleno").onclick=function(){
+				document.getElementById("zeleno").style.display="none";
+			}
+		</script>
+	</body>
+</html>

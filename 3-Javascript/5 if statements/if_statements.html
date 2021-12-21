@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+	</head>
+	<body>
+		<p>Username:<input type="text" id="Username"></p>
+		<p>Password:<input type="text" id="Password"></p>
+		<p><button id="Log_in">Log in</button></p>
+		<script type="text/javascript">
+			var Username="Slavko";
+			var Password="Stojcevski";
+			var Secret_Code="Urmi";	
+			var Entered_Username=document.getElementById("Username").value;
+			var Entered_Password=document.getElementById("Password").value;
+			document.getElementById("Log_in").onclick=function(){
+				alert(Username);
+				alert(Password);
+				alert(Entered_Username);
+				alert(Entered_Password);
+					if ((Username==Entered_Username)&&(Password==Entered_Password)) {
+							alert(Secret_Code);
+					}
+				}	
+		</script>
+	</body>
+</html>

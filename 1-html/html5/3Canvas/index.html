@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Canvas</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    </head>
+<body>
+    <canvas id="myCanvas" width="600" height="700" style="border:1px solid black;"></canvas>
+    <script type="text/javascript">
+        var kanvas=document.getElementById("myCanvas");
+        var context=kanvas.getContext("2d");
+        var gradient=context.createLinearGradient(50,100,200,300);
+        gradient.addColorStop(0,"green");
+        gradient.addColorStop(1,"white");
+        context.fillStyle=gradient;
+        context.fillRect(50,100,200,300);
+        context.strokeStyle="rgb(201, 38, 38)";
+        context.moveTo(200,250);
+        context.lineTo(400,250);
+        context.stroke();
+        context.lineTo(400,450);
+        context.stroke();
+        context.lineTo(200,450);
+        context.stroke();
+        context.lineTo(200,250);
+        context.stroke();
+        context.lineTo(400,450);
+        context.stroke();
+        context.moveTo(200,450);
+        context.lineTo(400,250);
+        context.stroke();
+        context.beginPath();
+        context.arc(300,350,100,Math.PI,2*Math.PI*3/4);
+        context.stroke();
+        var textgradient=context.createLinearGradient(200,50,300,50);
+        textgradient.addColorStop(0,"grey");
+        textgradient.addColorStop(1,"black");
+        context.fillStyle=textgradient;
+        context.font="20px Arial";
+        context.fillText("My Canvas",200,50);
+    </script>
+</body>
+</html>

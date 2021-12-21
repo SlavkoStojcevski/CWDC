@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Clock</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    </head>
+<body>
+    <canvas id="clock" width="500" height="500">Please upgrade your browser.</canvas>
+    <script type="text/javascript">
+        function Time(){
+            var canvas=document.getElementById("clock");
+            var context=canvas.getContext("2d");
+            var clockRadius=canvas.width/2;
+            var circle=2*Math.PI;
+            context.beginPath();
+            context.fillStyle="black";
+            context.arc(clockRadius,clockRadius,clockRadius,0,circle);
+            context.fill();
+            context.fillStyle="white";
+            context.beginPath();
+            context.arc(clockRadius,clockRadius,10,0,circle);
+            context.fill();
+            context.font=clockRadius/10+"px arial";
+            context.textAlign="center";
+            context.textBaseline="middle";
+            for(i=1;i<=12;i++){
+                context.fillText(i,clockRadius+clockRadius*0.9*Math.sin(i*circle/12),
+                                clockRadius-clockRadius*0.9*Math.cos(i*circle/12));
+            }
+            var date=new Date();
+            var hours=date.getHours();
+            var minutes=date.getMinutes();
+            var seconds=date.getSeconds();
+            var fullminutes=minutes+seconds/60;
+            var fullhours=hours%12+fullminutes/60;
+            var hoursangle=circle/12*fullhours;
+            var minutesangle=circle/60*fullminutes;
+            var secondsangle=circle/60*seconds;
+            context.strokeStyle="white";
+            context.moveTo(clockRadius,clockRadius);
+            context.lineTo(clockRadius+clockRadius*0.7*Math.sin(hoursangle),
+                        clockRadius-clockRadius*0.7*Math.cos(hoursangle));
+            context.lineWidth=5;
+            context.stroke();
+            context.moveTo(clockRadius,clockRadius);
+            context.lineTo(clockRadius+clockRadius*0.8*Math.sin(minutesangle),
+                        clockRadius-clockRadius*0.8*Math.cos(minutesangle));
+            context.lineWidth=3;
+            context.stroke();
+            context.moveTo(clockRadius,clockRadius);
+            context.lineTo(clockRadius+clockRadius*0.9*Math.sin(secondsangle),
+                        clockRadius-clockRadius*0.9*Math.cos(secondsangle));
+            context.lineWidth=2;
+            context.stroke();
+        }
+        setInterval(Time,100);
+    </script>
+</body>
+</html>

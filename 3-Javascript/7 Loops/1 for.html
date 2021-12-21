@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript</title>
+	</head>
+	<body>
+		<button position=fixed id="generate">generate</button>
+		<p id=0></p>
+		<script type="text/javascript">
+			var tweets=["hah","sranje","kadjebilibilobibolje","nakurovmi","ipaksranje"];
+			var alltweets="";
+			document.getElementById("generate").onclick=function(){
+					for(var i=0;i<tweets.length;i++){
+						alltweets+=("<p>"+tweets[i]+"<p>");
+					}
+					document.getElementById(0).innerHTML=alltweets;
+				}
+		</script>
+	</body>
+</html>

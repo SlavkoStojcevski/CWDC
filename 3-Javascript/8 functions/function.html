@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript functions</title>
+	</head>
+	<body>
+		<input id="broj" type="text">
+		<button position=fixed id="guess">guess</button>
+		<p id="izvestaj" ></p>
+		<script type="text/javascript">
+			function makeagues(){
+				var broj=document.getElementById("broj").value;
+				var status=false;
+				var pogodoci=1;
+				while(status==false){
+					var pogodok=Math.floor(Math.random()*10);
+					if (pogodok==broj) {
+						document.getElementById("izvestaj").innerHTML="Pogodiv od "+pogodoci+" pati, brojot e "+pogodok;
+						status=true;
+					}
+					else{
+						pogodoci++;
+					}
+				}
+			}
+			document.getElementById("guess").onclick=function(){
+					makeagues();
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JQuery1</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<style type="text/css">
+			#circle{
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				background-color: green;
+				margin: 20px;
+			}
+			.square{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				margin: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="circle"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<p></p>
+		<iframe width="700px" height="500px" src="https://www.slbet.com/landing/"></iframe>
+		<script type="text/javascript">
+			$("div").click(function(){
+				if($(this).attr("class")=="square"){
+					alert($(this).attr("class"));
+				} else {
+					alert($(this).attr("id"))
+				}
+			});
+		</script>
+	</body>
+</html>

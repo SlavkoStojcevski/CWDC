@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Layout and Calculations</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <style>
+            #multiple-layout{
+                column-count: 3;
+                column-gap: 30px;
+                column-rule-style: solid;
+                column-rule-width: 1px;
+                column-rule-color: grey;
+            }
+            h2{
+                column-span: all;
+            }
+            header{
+                width: 100%;
+                height: 50px;
+                background-color: grey;
+            }
+            body{
+                margin: 0;
+            }
+            #container{
+                width: 100%;
+                background-color: yellow;
+                height: -webkit-calc(100%-50px);
+                height: calc(100%-50px);
+                position: absolute;
+            }
+            .flexbox-container{
+                display: flex;
+                display: -webkit-flex;
+                width: 100%;
+                height: 500px;
+                background-color: aqua;
+                flex-wrap: wrap;
+                /*flex-direction: column;
+                -webkit-flex-direction:column;*/
+
+            }
+            .flexbox-item{
+                background-color: bisque;
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <div id="container">
+            <div class="flexbox-container">
+                <div class="flexbox-item" style="border: 10px solid grey;padding: 10px;">Item1</div>
+                <div class="flexbox-item">Item2</div>
+                <div class="flexbox-item">Item3</div>
+                <div class="flexbox-item">Item4</div>
+                <div class="flexbox-item">Item5</div>
+                <div class="flexbox-item">Item6</div>
+                <div class="flexbox-item">Item7</div>
+            </div>
+        </div>
+        <div id="multiple-layout">
+            <h2>Random News</h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Aliquam libero lorem, sollicitudin at fermentum in, maximus ut nisl.
+            Maecenas in pulvinar elit.
+            Morbi nisi est, malesuada condimentum tempor vehicula, iaculis in massa.
+            Donec et tempus tellus, quis sodales eros.
+            Aliquam finibus enim elit, non facilisis dui ultrices eu.
+            Donec non ipsum id arcu faucibus imperdiet.
+            Aenean venenatis in magna a tempus. Curabitur eget ultricies neque.
+            Phasellus id metus mi.
+            Nunc semper nibh quis est volutpat, ac eleifend tortor egestas.<br><br>
+            Cras nec massa libero. Mauris iaculis lorem vitae facilisis convallis.
+            Praesent non faucibus sapien, sed condimentum nisl.
+            Cras ac iaculis ante, id feugiat metus. Sed sit amet aliquet ipsum.
+            Donec ipsum justo, dictum vitae mi et, maximus pretium massa.
+            Curabitur luctus vitae nibh sit amet tincidunt.
+            Phasellus aliquam, nunc sit amet ullamcorper dictum, velit nulla volutpat urna,
+            non hendrerit quam risus dignissim ligula.
+            Donec tristique hendrerit volutpat.
+            Vivamus sed est nec tellus consequat pellentesque.
+            Vivamus porttitor urna ut mauris cursus varius.<br><br>
+            Cras maximus sapien eget nibh venenatis semper.
+            Fusce massa felis, malesuada non purus quis, feugiat pharetra magna.
+            Praesent commodo venenatis pharetra.
+            Nunc fermentum ex lectus, sit amet suscipit nisl maximus ac.
+            Fusce nisl lacus, feugiat sit amet sollicitudin a, volutpat gravida dui.
+            Quisque tincidunt mi dui, a tristique dolor efficitur in.
+            Quisque porttitor consectetur metus ut mollis.
+            Pellentesque cursus enim in mattis consectetur.
+            In enim erat, gravida ac neque et, varius interdum enim.
+            Curabitur vestibulum tellus eu vestibulum posuere.
+            Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            Duis semper, augue mollis bibendum ultricies, nisi arcu interdum diam,
+            aliquet convallis mauris felis a nulla.
+            Ut luctus neque mi, vitae dictum nulla vulputate et.
+            Praesent efficitur orci quis justo tempus, vel finibus augue dapibus.
+            Sed rutrum enim ac velit sollicitudin, ac elementum lectus tincidunt.
+        </div>
+    </body>
+</html>

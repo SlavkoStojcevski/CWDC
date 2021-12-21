@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Audio and Video</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    </head>
+<body>
+    <br><video id="video" width="800" height="400" autoplay89 controls>
+        <source src="C:\Users\Kompjuter\Downloads\flowers.mp4" type="video/mp4">
+    </video><br><br>
+    <audio controls id="audio">
+        <source type="audio/mpeg" src="C:\Users\Kompjuter\Downloads\audio.mp3">
+    </audio>
+    <br><br><button style="margin-left:10%;" id="play">Play</button>
+    <script>
+        document.getElementById("play").onclick=function(){
+            if(document.getElementById("play").innerHTML=="Play"){
+                document.getElementById("video").play();
+                document.getElementById("audio").play();
+                this.innerHTML="Pause";
+            }else{
+                document.getElementById("video").pause();
+                document.getElementById("audio").pause();
+                this.innerHTML="Play";
+            }
+        }
+    </script>
+</body>
+</html>
